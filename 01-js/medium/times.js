@@ -9,5 +9,17 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    sum = 0;
+    for (let i = 1; i <= n; i++)
+        sum += i;
 }
+
+let startTime = new Date().getTime(); //gets the milliseconds from 1970 to now
+calculateTime(1000000000);
+let endTime = new Date().getTime();
+console.log((endTime-startTime)/1000)
+
+//recordings 
+// 100 - 0 sec
+// 100000 - 0.011 sec
+// 1000000000 - 91.234 sec
